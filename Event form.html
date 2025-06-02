@@ -109,6 +109,57 @@
         </select>
         <div class="invalid-feedback">Please select a country.</div>
       </div>
-      </form>
-    </body>
+      <!-- Upload Resume -->
+      <div class="mb-3">
+        <label for="resume" class="form-label">Upload Resume</label>
+        <input class="form-control" type="file" id="resume" required />
+        <div class="invalid-feedback">Please upload your resume.</div>
+      </div>
+
+      <!-- Additional Comments -->
+      <div class="mb-3">
+        <label for="comments" class="form-label">Additional Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms" required />
+        <label class="form-check-label" for="terms">I accept the terms and conditions</label>
+        <div class="invalid-feedback">You must accept the terms.</div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Bootstrap validation script
+    (() => {
+      "use strict";
+      const forms = document.querySelectorAll(".needs-validation");
+
+      Array.from(forms).forEach((form) => {
+        form.addEventListener("submit", function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          // Password match validation
+          const pwd = document.getElementById("password").value;
+          const confirmPwd = document.getElementById("confirmPassword").value;
+          if (pwd !== confirmPwd) {
+            document.getElementById("confirmPassword").setCustomValidity("Passwords do not match");
+          } else {
+            document.getElementById("confirmPassword").setCustomValidity("");
+          }
+
+          form.classList.add("was-validated");
+        }, false);
+      });
+    })();
+  </script>
+</body>
 </html>
