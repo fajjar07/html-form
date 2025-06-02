@@ -54,6 +54,61 @@
         <input type="password" class="form-control" id="password" required minlength="6" />
         <div class="invalid-feedback">Password must be at least 6 characters.</div>
       </div>
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" required />
+        <div class="invalid-feedback">Passwords do not match.</div>
+      </div>
+
+      <!-- Gender -->
+      <div class="mb-3">
+        <label class="form-label">Gender</label><br />
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="male" required />
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="female" required />
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+        <div class="invalid-feedback d-block">Please select your gender.</div>
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-3">
+        <label class="form-label">Skills</label><br />
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="skillHtml" />
+          <label class="form-check-label" for="skillHtml">HTML</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="skillCss" />
+          <label class="form-check-label" for="skillCss">CSS</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="skillJs" />
+          <label class="form-check-label" for="skillJs">JavaScript</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="skillBootstrap" />
+          <label class="form-check-label" for="skillBootstrap">Bootstrap</label>
+        </div>
+      </div>
+
+      <!-- Country -->
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" required>
+          <option selected disabled value="">Choose...</option>
+          <option>Pakistan</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+          <option>Other</option>
+        </select>
+        <div class="invalid-feedback">Please select a country.</div>
+      </div>
       </form>
     </body>
 </html>
